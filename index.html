@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Tools</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app-body">
+  <header class="app-header">
+    <h1 class="app-title">Personal Tools</h1>
+  </header>
+
+  <nav class="tab-nav" role="tablist">
+    <button type="button" id="tab-btn-ohlcv" class="tab-btn is-active" data-tab-target="tab-panel-ohlcv" role="tab">
+      OHLCVマージ
+    </button>
+    <button type="button" id="tab-btn-comingsoon" class="tab-btn" data-tab-target="tab-panel-comingsoon" role="tab">
+      Tab 2
+    </button>
+  </nav>
+
+  <main class="tab-content">
+    <section id="tab-panel-ohlcv" class="tab-panel is-active" role="tabpanel">
+      <form id="ohlcv-merge-form">
+        <div class="form-row">
+          <label for="ohlcv-files-input" class="form-label">対象JSONファイル（複数選択可）</label>
+          <input type="file" id="ohlcv-files-input" name="files" class="form-input" accept=".json" multiple>
+        </div>
+
+        <div class="form-row">
+          <label for="ohlcv-existing-merged-input" class="form-label">
+            既存のマージ済みJSON（任意・追記する場合のみ選択）
+          </label>
+          <input type="file" id="ohlcv-existing-merged-input" name="existingMerged" class="form-input" accept=".json">
+        </div>
+
+        <div class="form-row">
+          <label for="ohlcv-codes-input" class="form-label">銘柄コード（カンマ区切り）</label>
+          <input type="text" id="ohlcv-codes-input" name="codes" class="form-input" placeholder="1301,1332,1333">
+        </div>
+
+        <button type="submit" id="ohlcv-merge-submit" class="btn-primary">マージしてダウンロード</button>
+      </form>
+
+      <p id="ohlcv-status-message" class="status-message" role="status"></p>
+    </section>
+
+    <section id="tab-panel-comingsoon" class="tab-panel" role="tabpanel">
+      <p class="coming-soon-text">Coming Soon...</p>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/tabs/ohlcvMergeTab.js"></script>
+  <script src="js/tabs/comingSoonTab.js"></script>
+</body>
+</html>

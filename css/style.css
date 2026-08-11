@@ -1,0 +1,132 @@
+/*
+ * コーディング規約:
+ *   - セレクタは class のみを使用する。
+ *   - 要素型セレクタ（body, div, input 等）・全称セレクタ（*）・id セレクタは使用しない。
+ *   - box-sizing 等、本来は全要素へ一括適用したいプロパティも、
+ *     対象となる各 class に個別記述する（* { box-sizing: border-box; } を使わない）。
+ */
+
+:root {
+  /* スクリーンショット（yubune.co）準拠：クリーム地×濃紺のコントラスト */
+  --color-bg: #ece5d6;
+  --color-fg: #1d2340;
+  --color-accent: #1d2340;
+  --color-border: #cabfa4;
+  --color-surface: #f7f3e9;
+}
+
+.app-body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+.app-header {
+  padding: 3rem 2rem 1.5rem;
+  text-align: center;
+}
+
+.app-title {
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.3em;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.6rem;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  color: var(--color-fg);
+  padding-bottom: 0.4rem;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.tab-btn.is-active {
+  opacity: 1;
+  border-bottom-color: var(--color-accent);
+}
+
+.tab-content {
+  max-width: 640px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.is-active {
+  display: block;
+}
+
+.form-row {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+}
+
+.form-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--color-fg);
+}
+
+.btn-primary {
+  box-sizing: border-box;
+  padding: 0.6rem 1.8rem;
+  background-color: transparent;
+  color: var(--color-fg);
+  border: 1px solid var(--color-fg);
+  border-radius: 999px;
+  letter-spacing: 0.15em;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-fg);
+  color: var(--color-surface);
+}
+
+.status-message {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.coming-soon-text {
+  text-align: center;
+  opacity: 0.5;
+  letter-spacing: 0.15em;
+}
