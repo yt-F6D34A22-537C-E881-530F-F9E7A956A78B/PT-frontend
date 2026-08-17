@@ -100,6 +100,19 @@
   color: var(--color-fg);
 }
 
+.form-textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 160px;
+  padding: 0.6rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--color-fg);
+  resize: vertical;
+}
+
 .btn-primary {
   box-sizing: border-box;
   padding: 0.6rem 1.8rem;

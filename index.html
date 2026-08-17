@@ -20,8 +20,11 @@
     <button type="button" id="tab-btn-ohlcv" class="tab-btn is-active" data-tab-target="tab-panel-ohlcv" role="tab">
       OHLCVマージ
     </button>
+    <button type="button" id="tab-btn-ocr" class="tab-btn" data-tab-target="tab-panel-ocr" role="tab">
+      画像OCR
+    </button>
     <button type="button" id="tab-btn-comingsoon" class="tab-btn" data-tab-target="tab-panel-comingsoon" role="tab">
-      Tab 2
+      Tab 3
     </button>
   </nav>
 
@@ -51,6 +54,26 @@
       <p id="ohlcv-status-message" class="status-message" role="status"></p>
     </section>
 
+    <section id="tab-panel-ocr" class="tab-panel" role="tabpanel">
+      <form id="ocr-form">
+        <div class="form-row">
+          <label for="ocr-image-input" class="form-label">対象画像ファイル</label>
+          <input type="file" id="ocr-image-input" name="image" class="form-input" accept="image/*">
+        </div>
+
+        <button type="submit" id="ocr-extract-submit" class="btn-primary">文字列を抽出</button>
+      </form>
+
+      <p id="ocr-status-message" class="status-message" role="status"></p>
+
+      <div class="form-row">
+        <label for="ocr-result-textarea" class="form-label">抽出結果</label>
+        <textarea id="ocr-result-textarea" name="result" class="form-textarea" readonly></textarea>
+      </div>
+
+      <button type="button" id="ocr-copy-button" class="btn-primary">クリップボードにコピー</button>
+    </section>
+
     <section id="tab-panel-comingsoon" class="tab-panel" role="tabpanel">
       <p class="coming-soon-text">Coming Soon...</p>
     </section>
@@ -59,5 +82,6 @@
   <script src="js/main.js"></script>
   <script src="js/tabs/ohlcvMergeTab.js"></script>
   <script src="js/tabs/comingSoonTab.js"></script>
+  <script src="js/tabs/imageOcrTab.js"></script>
 </body>
 </html>
