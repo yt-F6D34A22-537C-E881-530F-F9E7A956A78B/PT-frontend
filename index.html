@@ -61,6 +61,26 @@
           <input type="file" id="ocr-image-input" name="image" class="form-input" accept="image/*">
         </div>
 
+        <div class="form-row">
+          <span class="form-label">またはクリップボードから貼り付け</span>
+          <div id="ocr-paste-zone" class="ocr-paste-zone" tabindex="0">
+            ここをクリックして Ctrl+V（Macは⌘+V）で画像を貼り付け
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="ocr-lang-select" class="form-label">認識言語</label>
+          <select id="ocr-lang-select" name="lang" class="form-input">
+            <option value="jpn+eng" selected>日本語＋英語</option>
+            <option value="jpn">日本語のみ</option>
+            <option value="eng">英語のみ</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <img id="ocr-preview-image" class="ocr-preview-image" alt="選択中の画像プレビュー" hidden>
+        </div>
+
         <button type="submit" id="ocr-extract-submit" class="btn-primary">文字列を抽出</button>
       </form>
 
