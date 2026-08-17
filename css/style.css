@@ -113,6 +113,29 @@
   resize: vertical;
 }
 
+.ocr-paste-zone {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px dashed var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-fg);
+  font-size: 0.85rem;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.ocr-paste-zone:focus {
+  outline: 1px solid var(--color-accent);
+  opacity: 1;
+}
+
+.ocr-preview-image {
+  max-width: 100%;
+  border: 1px solid var(--color-border);
+}
+
 .btn-primary {
   box-sizing: border-box;
   padding: 0.6rem 1.8rem;
