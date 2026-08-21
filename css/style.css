@@ -29,6 +29,7 @@
 }
 
 .app-title {
+  font-style: italic;
   font-weight: 100;
   letter-spacing: 0.3em;
   font-size: 1rem;
