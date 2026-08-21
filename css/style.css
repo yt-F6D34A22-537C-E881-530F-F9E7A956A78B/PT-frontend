@@ -28,8 +28,7 @@
 }
 
 .app-title {
-  font-weight: 400;
-  font-style: italic;
+  font-weight: 200;
   letter-spacing: 0.3em;
   font-size: 1.6rem;
   margin: 0;
@@ -86,7 +85,6 @@
 .form-label {
   font-size: 0.85rem;
   letter-spacing: 0.05em;
-  opacity: 0.75;
 }
 
 .form-input {
