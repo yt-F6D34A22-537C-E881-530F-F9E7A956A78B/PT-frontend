@@ -8,9 +8,9 @@
 
 :root {
   /* スクリーンショット（yubune.co）準拠：クリーム地×濃紺のコントラスト */
-  --color-bg: #ece5d6;
-  --color-fg: #1d2340;
-  --color-accent: #1d2340;
+  --color-bg: #EDE9DE;
+  --color-fg: #00053A;
+  --color-accent: #00053A;
   --color-border: #cabfa4;
   --color-surface: #f7f3e9;
 }
